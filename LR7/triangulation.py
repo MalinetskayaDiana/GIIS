@@ -62,7 +62,6 @@ def delaunay_triangulation(points):
 
         boundary = [edge for edge, count in edge_count.items() if count == 1]
 
-        # Убираем плохие треугольники
         triangles = [t for t in triangles if t not in bad_triangles]
 
         # Соединяем границу с новой точкой – создаём новые треугольники
